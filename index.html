@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=stylesheet href=styles.css>
-    <title>Document</title>
+    <title></title>
 </head>
 <body>
+    <script type="text/javascript">
+        var rev = "fwd";
+        function titlebar(val)
+        {
+        var msg = "Hello World! Welcome to Damix-hash's Site!;
+        var res = " ";
+        var speed = 100;
+        var pos = val;
+        msg = "Hello World! Welcome to Damix-hash's Site!";
+        var le = msg.length;
+        if(rev == "fwd"){
+        if(pos < le){
+        pos = pos+1;
+        scroll = msg.substr(0,pos);
+        document.title = scroll;
+        timer = window.setTimeout("titlebar("+pos+")",speed);}
+        else{
+        rev = "bwd";
+        timer = window.setTimeout("titlebar("+pos+")",speed);}}
+        else{
+        if(pos > 0){
+        pos = pos-1;
+        var ale = le-pos;
+        scrol = msg.substr(ale,le);
+        document.title = scrol;
+        timer = window.setTimeout("titlebar("+pos+")",speed);}
+        else{
+        rev = "fwd";
+        timer = window.setTimeout("titlebar("+pos+")",speed);
+        }}}
+        titlebar(0);
+    </script>
     <p> Hello World! </p>
     <p> Site's Coming Soon </p>
 </body>
